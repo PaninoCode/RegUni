@@ -15,7 +15,7 @@
           <a class="nav-link" href="?units">Unità Formative</a>
         </li>
       </ul>
-      <button type="button" class="btn btn-light" id="loginButton">Login</button>
+      <button type="button" class="btn btn-light" id="loginButton">Accedi</button>
     </div>
   </div>
 </nav>
