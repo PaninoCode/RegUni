@@ -15,7 +15,15 @@
           <a class="nav-link" href="?units">Unità Formative</a>
         </li>
       </ul>
-      <button type="button" class="btn btn-light" id="loginButton">Accedi</button>
+      <button type="button" class="btn btn-light" id="loginButton">
+        <?php
+          if (isset($_COOKIE['token']) && isset($_COOKIE['badge']) && (isset($_COOKIE['status']) && $_COOKIE['status'] != "error_logged_out")) {
+            echo "<b>" . $_COOKIE['badge'] . "</b> - Esci";
+          } else {
+            echo "Accedi";
+          }
+        ?>
+      </button>
     </div>
   </div>
 </nav>
@@ -23,5 +31,6 @@
   var loginButton = document.querySelector("#loginButton");
   loginButton.addEventListener("click", function() {
     window.location.href = "?login";
+    document.cookie = "token=; path=/";
   });
 </script>
