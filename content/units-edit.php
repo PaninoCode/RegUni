@@ -1,1 +1,1 @@
-<title><?php echo "Modifica Unità Formative - RegUni" ?></title>
+<title><?php echo "Modifica Unità Didattiche - RegUni" ?></title>

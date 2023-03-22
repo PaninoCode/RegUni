@@ -23,7 +23,11 @@ $result = $db_conn->query($sqlSELECT);
 if ($result->num_rows == 1) {
     // output data of each row
     while ($row = $result->fetch_assoc()) {
-        echo("true");
+        //echo "id: " . $row["id"] . " - Name: " . $row["name"] . " " . $row["lastname"] . "<br>";
+        //echo json_encode($row);
+        //echo $row["numero_badge"];
+        //echo $row["token"];
+        //echo $row["last_login"];
     }
 } else {
     setcookie("status", "error_logged_out", 0, "/");
